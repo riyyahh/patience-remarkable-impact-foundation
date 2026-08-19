@@ -2,49 +2,70 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const menuIcon = menuToggle.querySelector("i");
 
+function openMobileMenu() {
+  navLinks.classList.add("active");
+  menuIcon.classList.remove("fa-bars");
+  menuIcon.classList.add("fa-xmark");
+  menuToggle.setAttribute("aria-label", "Close navigation menu");
+  menuToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeMobileMenu() {
+  navLinks.classList.remove("active");
+  menuIcon.classList.remove("fa-xmark");
+  menuIcon.classList.add("fa-bars");
+  menuToggle.setAttribute("aria-label", "Open navigation menu");
+  menuToggle.setAttribute("aria-expanded", "false");
+
+  // collapse any open "About Us" submenu too
+  document.querySelectorAll(".dropdown.open").forEach((dropdown) => {
+    dropdown.classList.remove("open");
+    const trigger = dropdown.querySelector(":scope > a");
+    if (trigger) trigger.setAttribute("aria-expanded", "false");
+  });
+}
+
 // OPEN / CLOSE MOBILE MENU
 menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-
   if (navLinks.classList.contains("active")) {
-    menuIcon.classList.remove("fa-bars");
-    menuIcon.classList.add("fa-xmark");
-
-    menuToggle.setAttribute("aria-label", "Close navigation menu");
+    closeMobileMenu();
   } else {
-    menuIcon.classList.remove("fa-xmark");
-    menuIcon.classList.add("fa-bars");
-
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    openMobileMenu();
   }
 });
 
-// CLOSE MENU WHEN A NAV LINK IS CLICKED
-const navItems = document.querySelectorAll(".nav-links a");
+// "ABOUT US" DROPDOWN — TAP TO OPEN ON MOBILE, HOVER STILL WORKS ON DESKTOP
+const dropdowns = document.querySelectorAll(".dropdown");
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navLinks.classList.remove("active");
+dropdowns.forEach((dropdown) => {
+  const trigger = dropdown.querySelector(":scope > a");
+  if (!trigger) return;
 
-    menuIcon.classList.remove("fa-xmark");
-    menuIcon.classList.add("fa-bars");
+  trigger.setAttribute("aria-expanded", "false");
 
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
+  trigger.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const isOpen = dropdown.classList.toggle("open");
+      trigger.setAttribute("aria-expanded", isOpen);
+    }
   });
 });
 
-//ABOUT US DROP DOWN MENU ON MOBILE
-const dropdown = document.querySelector(".dropdown");
-const dropdownLink = dropdown?.querySelector(":scope > a");
+// CLOSE MOBILE MENU WHEN AN ACTUAL DESTINATION LINK IS CLICKED
+// (the "About Us" trigger itself is excluded — it's handled above)
+const navItems = document.querySelectorAll(".nav-links a");
 
-dropdownLink?.addEventListener("click", function (e) {
-  if (window.innerWidth <= 768) {
-    e.preventDefault();
-    dropdown.classList.toggle("open");
-  }
+navItems.forEach((item) => {
+  const isDropdownTrigger = item.parentElement.classList.contains("dropdown");
+  if (isDropdownTrigger) return;
+
+  item.addEventListener("click", () => {
+    closeMobileMenu();
+  });
 });
 
-//CURRENT YEAR UPDATE
+// CURRENT YEAR UPDATE
 const currentYear = document.getElementById("current-year");
 
 if (currentYear) {

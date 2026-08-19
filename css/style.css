@@ -1255,12 +1255,14 @@ h6 {
   z-index: 1000;
 }
 
-/* Show dropdown when hovering About Us */
+/* Show dropdown when hovering About Us — hover-capable devices only.*/
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-menu li {
