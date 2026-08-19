@@ -33,6 +33,17 @@ navItems.forEach((item) => {
   });
 });
 
+//ABOUT US DROP DOWN MENU ON MOBILE
+const dropdown = document.querySelector(".dropdown");
+const dropdownLink = dropdown?.querySelector(":scope > a");
+
+dropdownLink?.addEventListener("click", function (e) {
+  if (window.innerWidth <= 768) {
+    e.preventDefault();
+    dropdown.classList.toggle("open");
+  }
+});
+
 //CURRENT YEAR UPDATE
 const currentYear = document.getElementById("current-year");
 

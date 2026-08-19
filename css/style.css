@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   color: #123b3d;
   background-color: #ffffff;
   padding-top: 80px;
@@ -36,6 +36,15 @@ textarea {
 
 ul {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 /* ================================
@@ -1215,103 +1224,125 @@ ul {
   line-height: 1.6;
 }
 
-/* ================================
-   BOARD OF TRUSTEES
-================================ */
+/* ABOUT US DROPDOWN */
 
-.trustees-section {
-  padding: 60px 6%;
-
-  background-color: #f5f8f6;
+.dropdown {
+  position: relative;
 }
 
-.trustees-section .section-heading {
-  max-width: 700px;
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
 
-  margin: 0 auto 40px;
+  min-width: 190px;
+  padding: 10px 0;
+
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  list-style: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+
+  z-index: 1000;
+}
+
+/* Show dropdown when hovering About Us */
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 18px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* =========================
+   MEET OUR TEAM PAGE
+========================= */
+
+.team-hero {
+  min-height: 55vh;
+  padding: 120px 8%;
+  background: #123b3d;
+  color: #ffffff;
+}
+
+.team-hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
 
   text-align: center;
 }
 
-.trustees-section .section-label {
-  margin-bottom: 8px;
+/* TEAM SECTION */
 
-  color: #006b70;
-
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
+.team-section {
+  padding: 50px 8%;
+  background: #123b3d;
 }
 
-.trustees-section .section-heading h2 {
-  margin-bottom: 12px;
-
-  color: #123b3d;
-
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 900;
-  text-transform: uppercase;
+.team-heading {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  text-align: center;
+  color: #ffff;
 }
 
-.trustees-section .section-heading > p:last-child {
-  color: #666666;
-
-  font-size: 14px;
-  line-height: 1.7;
+.team-heading > p:last-child {
+  line-height: 1.8;
+  color: #c9c6c6;
+  margin-top: 10px;
 }
 
-/* TRUSTEE GRID */
+/* TEAM GRID */
 
-.trustees-grid {
+.team-grid {
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-
-  max-width: 1000px;
-
-  margin: 0 auto;
+  gap: 30px;
 }
 
-.trustee-card {
+.team-card {
+  background: #f5f5f5;
   overflow: hidden;
-
-  background-color: #ffffff;
-
-  border-radius: 8px;
 }
 
-.trustee-image {
-  height: 280px;
+.team-image {
+  height: 330px;
+  background: #eeeeee;
 }
 
-.trustee-image img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
+.team-info {
+  padding: 22px;
+  text-align: center;
 }
 
-.trustee-info {
-  padding: 18px 20px;
-}
-
-.trustee-info h3 {
-  margin-bottom: 5px;
-
-  color: #123b3d;
-
-  font-size: 17px;
-  font-weight: 800;
-}
-
-.trustee-info p {
-  color: #006b70;
-
-  font-size: 13px;
-  font-weight: 600;
+.team-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
 }
 
 /* ================================
@@ -1421,8 +1452,6 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  align-items: center;
-
   min-height: 430px;
 
   background-color: #f5f8f6;
@@ -1435,7 +1464,7 @@ ul {
 /* IMAGE */
 
 .program-detail-image {
-  height: 430px;
+  height: 450px;
 }
 
 .program-detail-image img {
@@ -1778,6 +1807,213 @@ ul {
 
 .help-card a:hover {
   color: #123b3d;
+}
+
+/* =========================
+   PARTNER WITH US PAGE
+========================= */
+
+.partner-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 8%;
+  background: #123b3d;
+  color: #ffffff;
+}
+
+.partner-hero-content {
+  max-width: 850px;
+}
+
+.partner-hero .hero-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.partner-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  margin: 20px 0 30px;
+}
+
+.partner-hero h1 span {
+  display: block;
+}
+
+.partner-hero-content > p:last-child {
+  max-width: 700px;
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* =========================
+   WHY PARTNER WITH US
+========================= */
+
+.partner-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.partner-intro-image {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.partner-intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-intro-content {
+  max-width: 600px;
+}
+
+.partner-intro-content .section-label {
+  margin-bottom: 15px;
+}
+
+.partner-intro-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0 0 30px;
+}
+
+.partner-intro-content h2 span {
+  display: block;
+}
+
+.partner-intro-content p:not(.section-label) {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   WAYS TO PARTNER
+========================= */
+
+.partnership-options {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.partnership-options .section-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.partnership-options .section-heading p:last-child {
+  line-height: 1.8;
+}
+
+.partnership-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid #dddddd;
+}
+
+.partnership-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 30px;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 10px;
+  border-bottom: 1px solid #dddddd;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    padding 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.partnership-item:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f8f8f8;
+}
+
+.partnership-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #123b3d;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.partnership-text h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.partnership-text p {
+  margin: 0;
+  max-width: 700px;
+  line-height: 1.7;
+  color: #666666;
+}
+
+.partnership-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.partnership-item:hover .partnership-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================
+   LET'S WORK TOGETHER
+========================= */
+
+.partner-collaboration {
+  padding: 100px 8%;
+  background: #123b3d;
+  color: #ffffff;
+}
+
+.partner-collaboration-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partner-collaboration-content .cta-label {
+  margin-bottom: 15px;
+}
+
+.partner-collaboration-content h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0 0 25px;
+}
+
+.partner-collaboration-content h2 span {
+  display: block;
+}
+
+.partner-collaboration-content p:last-child {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+.cta-section {
+  border-top: 3px solid #ffff;
 }
 
 /* ================================
@@ -2461,17 +2697,59 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .trustees-section {
-    padding: 45px 6%;
+  /* ================================
+      ABOUT US DROP-DOWN MENU
+    ================================= */
+
+  .dropdown-menu {
+    position: static;
+
+    display: none;
+
+    width: 100%;
+
+    padding: 0;
+
+    box-shadow: none;
+
+    background: #f8f8f8;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
-  .trustees-grid {
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 20px;
+  }
+
+  /* ================================
+       TEAM PAGE
+    ================================= */
+
+  .team-hero {
+    min-height: 55vh;
+    padding: 100px 5%;
+  }
+
+  .team-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .team-section {
+    padding: 70px 5%;
+  }
+
+  .team-grid {
     grid-template-columns: 1fr;
-
-    max-width: 400px;
+    gap: 25px;
   }
 
-  .trustee-image {
+  .team-image {
     height: 300px;
   }
 
@@ -2543,6 +2821,64 @@ ul {
     grid-template-columns: 1fr;
 
     max-width: 400px;
+  }
+  /* ================================
+       PARTNER PAGE
+    ================================= */
+
+  .partner-hero {
+    min-height: 60vh;
+    padding: 100px 5%;
+  }
+
+  .partner-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .partner-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 70px 5%;
+  }
+
+  .partner-intro-image {
+    height: 350px;
+  }
+
+  .partner-intro-content {
+    max-width: 100%;
+  }
+
+  .partnership-options {
+    padding: 70px 5%;
+  }
+
+  .partnership-item {
+    grid-template-columns: 50px 1fr 20px;
+    gap: 15px;
+    padding: 25px 5px;
+  }
+
+  .partnership-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .partnership-text h3 {
+    font-size: 1.05rem;
+  }
+
+  .partnership-text p {
+    font-size: 0.9rem;
+  }
+
+  .partnership-arrow {
+    font-size: 14px;
+  }
+
+  .partner-collaboration {
+    padding: 70px 5%;
   }
 
   /* ================================

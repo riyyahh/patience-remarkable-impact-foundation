@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="Explore the programs of Patience Remarkable Impact Foundation and how we support children, families, and communities."
+      content="Explore the programs of Patience Remarkable Impact Foundation, including community development, food and nutrition, education, medical programmes, community welfare, and support for children and vulnerable people."
     />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -17,6 +17,12 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -32,11 +38,27 @@
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="about.html">
+              About Us
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html">Who We Are</a>
+              </li>
+
+              <li>
+                <a href="team.html">Meet Our Team</a>
+              </li>
+            </ul>
+          </li>
           <li>
             <a href="programs.html" class="nav-programs active">Programs</a>
           </li>
           <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="partner.html">Partner With Us</a></li>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -74,22 +96,70 @@
       </h2>
 
       <p>
-        Our programs are designed to respond to real needs within communities.
-        Through targeted initiatives, partnerships and outreach activities, we
-        work to provide practical support while creating opportunities for
-        people to build better and more secure lives.
+        Patience Remarkable Impact Foundation works across communities to
+        respond to social and practical needs through programmes in community
+        development, food and nutrition, education, medical care, community
+        welfare, and support for children and vulnerable people. Through
+        partnerships, outreach and community-driven initiatives, we work to
+        create meaningful and sustainable impact.
       </p>
+    </section>
+
+    <!-- COMMUNITY DEVELOPMENT -->
+
+    <section class="program-detail">
+      <div class="program-detail-image">
+        <img
+          src="images/community-program.jpg"
+          alt="Community development initiative"
+        />
+      </div>
+
+      <div class="program-detail-content">
+        <span class="program-number">01</span>
+
+        <h2>Community Development</h2>
+
+        <p>
+          We work alongside communities to identify needs, encourage
+          participation and support initiatives that contribute to positive and
+          sustainable change.
+        </p>
+
+        <p>
+          By working together with community members and partners, we aim to
+          strengthen local capacity and create opportunities for collective
+          progress.
+        </p>
+
+        <ul>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Community initiatives
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Community engagement
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Partnership development
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- FOOD & NUTRITION -->
 
-    <section class="program-detail">
+    <section class="program-detail program-detail-reverse">
       <div class="program-detail-image">
         <img src="images/food-program.jpg" alt="Food and nutrition outreach" />
       </div>
 
       <div class="program-detail-content">
-        <span class="program-number">01</span>
+        <span class="program-number">02</span>
 
         <h2>Food & Nutrition</h2>
 
@@ -126,15 +196,15 @@
 
     <!-- HEALTHCARE -->
 
-    <section class="program-detail program-detail-reverse">
+    <section class="program-detail">
       <div class="program-detail-image">
         <img src="images/health-program.jpg" alt="Healthcare outreach" />
       </div>
 
       <div class="program-detail-content">
-        <span class="program-number">02</span>
+        <span class="program-number">03</span>
 
-        <h2>Healthcare</h2>
+        <h2>Medical Programmes</h2>
 
         <p>
           We support access to essential healthcare services and promote health
@@ -168,7 +238,7 @@
 
     <!-- EDUCATION -->
 
-    <section class="program-detail">
+    <section class="program-detail program-detail-reverse">
       <div class="program-detail-image">
         <img
           src="images/education-program.jpg"
@@ -177,7 +247,7 @@
       </div>
 
       <div class="program-detail-content">
-        <span class="program-number">03</span>
+        <span class="program-number">04</span>
 
         <h2>Education</h2>
 
@@ -213,7 +283,7 @@
 
     <!-- WELFARE -->
 
-    <section class="program-detail program-detail-reverse">
+    <section class="program-detail program">
       <div class="program-detail-image">
         <img
           src="images/welfare-program.jpg"
@@ -222,9 +292,9 @@
       </div>
 
       <div class="program-detail-content">
-        <span class="program-number">04</span>
+        <span class="program-number">05</span>
 
-        <h2>Welfare & Support</h2>
+        <h2>Community Welfare</h2>
 
         <p>
           We provide support to vulnerable individuals and families facing
@@ -255,47 +325,47 @@
       </div>
     </section>
 
-    <!-- COMMUNITY DEVELOPMENT -->
+    <!-- CHILDREN & VULNERABLE-PERSON SUPPORT -->
 
-    <section class="program-detail">
+    <section class="program-detail program-detail-reverse">
       <div class="program-detail-image">
         <img
-          src="images/community-program.jpg"
-          alt="Community development initiative"
+          src="images/children-program.jpg"
+          alt="Children and vulnerable people receiving support"
         />
       </div>
 
       <div class="program-detail-content">
-        <span class="program-number">05</span>
+        <span class="program-number">06</span>
 
-        <h2>Community Development</h2>
+        <h2>Children & Vulnerable-Person Support</h2>
 
         <p>
-          We work alongside communities to identify needs, encourage
-          participation and support initiatives that contribute to positive and
-          sustainable change.
+          We support children and other vulnerable people who may face barriers
+          to safety, education, basic needs and opportunities for a better
+          future.
         </p>
 
         <p>
-          By working together with community members and partners, we aim to
-          strengthen local capacity and create opportunities for collective
-          progress.
+          Through targeted support and community initiatives, we work to promote
+          wellbeing, dignity, protection and opportunities for vulnerable people
+          to thrive.
         </p>
 
         <ul>
           <li>
             <i class="fa-solid fa-check"></i>
-            Community initiatives
+            Child welfare and support
           </li>
 
           <li>
             <i class="fa-solid fa-check"></i>
-            Community engagement
+            Support for vulnerable people
           </li>
 
           <li>
             <i class="fa-solid fa-check"></i>
-            Partnership development
+            Wellbeing and empowerment initiatives
           </li>
         </ul>
       </div>
@@ -358,11 +428,19 @@
             </li>
 
             <li>
+              <a href="team.html">Meet The Team</a>
+            </li>
+
+            <li>
               <a href="programs.html">Our Programs</a>
             </li>
 
             <li>
               <a href="campaigns.html">Campaigns</a>
+            </li>
+
+            <li>
+              <a href="partner.html">Partner With Us</a>
             </li>
 
             <li>

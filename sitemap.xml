@@ -11,12 +11,21 @@
     </url>
 
     <url>
+        <loc>https://YOUR-DOMAIN.com/team.html</loc>
+    </url>
+
+    <url>
         <loc>https://YOUR-DOMAIN.com/programs.html</loc>
     </url>
 
     <url>
         <loc>https://YOUR-DOMAIN.com/campaigns.html</loc>
     </url>
+
+<url>
+        <loc>https://YOUR-DOMAIN.com/partner.html</loc>
+    </url>
+
 
     <url>
         <loc>https://YOUR-DOMAIN.com/donate.html</loc>

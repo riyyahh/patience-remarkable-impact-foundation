@@ -17,6 +17,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -31,9 +37,25 @@
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="about.html">
+              About Us
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html">Who We Are</a>
+              </li>
+
+              <li>
+                <a href="team.html">Meet Our Team</a>
+              </li>
+            </ul>
+          </li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="partner.html">Partner With Us</a></li>
           <li><a href="donate.html" class="nav-donate active">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -237,11 +259,19 @@
             </li>
 
             <li>
+              <a href="team.html">Meet The Team</a>
+            </li>
+
+            <li>
               <a href="programs.html">Our Programs</a>
             </li>
 
             <li>
               <a href="campaigns.html">Campaigns</a>
+            </li>
+
+            <li>
+              <a href="partner.html">Partner With Us</a>
             </li>
 
             <li>

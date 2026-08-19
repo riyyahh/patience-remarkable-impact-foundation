@@ -17,6 +17,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -31,9 +37,25 @@
 
         <ul class="nav-links">
           <li><a href="index.html" class="nav-index active">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="about.html">
+              About Us
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html">Who We Are</a>
+              </li>
+
+              <li>
+                <a href="team.html">Meet Our Team</a>
+              </li>
+            </ul>
+          </li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="partner.html">Partner With Us</a></li>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -57,9 +79,10 @@
           </h1>
 
           <p class="hero-text">
-            We impact and create a safe haven for children, but we can't do this
-            without your support. Together, we can build a better tomorrow for
-            vulnerable children and communities.
+            Patience Remarkable Impact Foundation works to strengthen
+            communities and improve lives through programmes in education,
+            healthcare, food and nutrition, community development, welfare, and
+            support for children and vulnerable people.
           </p>
 
           <div class="hero-buttons">
@@ -82,10 +105,14 @@
           <h2>WHO WE ARE</h2>
 
           <p>
-            Patience Remarkable Impact Foundation is a non-profit organization
-            committed to improving the lives of vulnerable children and
-            communities through food, healthcare, education and community
-            development.
+            Patience Remarkable Impact Foundation is a community development and
+            welfare organisation committed to creating meaningful and lasting
+            change. Through practical programmes and community-driven
+            initiatives, we work to improve access to education, healthcare,
+            food and nutrition, community support and opportunities for
+            vulnerable people. Our work extends across communities, families,
+            children and other individuals who need support, with a focus on
+            dignity, empowerment and sustainable impact.
           </p>
 
           <a href="about.html" class="btn about-btn"> READ MORE </a>
@@ -111,14 +138,29 @@
         <div class="programs-grid">
           <article class="program-card">
             <div class="program-icon">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+
+            <h3>Community Development</h3>
+
+            <p>
+              Working with communities to create positive and sustainable
+              change.
+            </p>
+
+            <a href="programs.html"> Learn More </a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-icon">
               <i class="fa-solid fa-bowl-food"></i>
             </div>
 
             <h3>Food & Nutrition</h3>
 
             <p>
-              Providing food and nutritional support to vulnerable children and
-              families.
+              Promoting food security and providing nutritional support to
+              individuals and families in need.
             </p>
 
             <a href="programs.html"> Learn More </a>
@@ -129,11 +171,11 @@
               <i class="fa-solid fa-heart-pulse"></i>
             </div>
 
-            <h3>Medical Outreach</h3>
+            <h3>Medical Programmes</h3>
 
             <p>
-              Supporting communities through healthcare, medical screenings and
-              health education.
+              Supporting communities through healthcare initiatives, medical
+              outreach, screenings and health education.
             </p>
 
             <a href="programs.html"> Learn More </a>
@@ -159,11 +201,11 @@
               <i class="fa-solid fa-child-reaching"></i>
             </div>
 
-            <h3>Child Welfare</h3>
+            <h3>Children & Vulnerable-Person Support</h3>
 
             <p>
-              Supporting vulnerable children and promoting their wellbeing,
-              safety and development.
+              Supporting vulnerable children and individuals while promoting
+              their wellbeing, dignity, safety and development.
             </p>
 
             <a href="programs.html"> Learn More </a>
@@ -171,20 +213,20 @@
 
           <article class="program-card">
             <div class="program-icon">
-              <i class="fa-solid fa-people-group"></i>
+              <i class="fa-solid fa-heart-pulse"></i>
             </div>
 
-            <h3>Community Development</h3>
+            <h3>Community Welfare</h3>
 
             <p>
-              Working with communities to create positive and sustainable
-              change.
+              Supporting individuals and families through practical assistance,
+              welfare initiatives and community-focused programmes that respond
+              to local needs.
             </p>
 
             <a href="programs.html"> Learn More </a>
           </article>
         </div>
-
         <div class="programs-button">
           <a href="programs.html" class="btn btn-primary">
             VIEW ALL PROGRAMS
@@ -337,11 +379,19 @@
             </li>
 
             <li>
+              <a href="team.html">Meet The Team</a>
+            </li>
+
+            <li>
               <a href="programs.html">Our Programs</a>
             </li>
 
             <li>
               <a href="campaigns.html">Campaigns</a>
+            </li>
+
+            <li>
+              <a href="partner.html">Partner With Us</a>
             </li>
 
             <li>
